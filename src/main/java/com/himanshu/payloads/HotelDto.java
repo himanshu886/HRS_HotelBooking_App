@@ -23,9 +23,6 @@ public class HotelDto {
 	    private String location;
 
 	    @NotBlank
-		@Size(min = 10, message = "min size of hotel desc is 10")
+		@Size(min = 100, message = "min size of hotel desc is 100")
 	    private String description;
-	    
-	    private String imageName;
-	    
 }

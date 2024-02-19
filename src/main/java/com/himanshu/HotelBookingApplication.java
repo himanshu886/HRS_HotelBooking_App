@@ -20,8 +20,4 @@ public class HotelBookingApplication {
 		
 		return new ModelMapper();
 	}
-	
-	//we are annotating with @bean bcoz spring container will automatically
-	//craete its object. then we can use modelmapper in our project anywhere by annotating with @autowired
-
 }

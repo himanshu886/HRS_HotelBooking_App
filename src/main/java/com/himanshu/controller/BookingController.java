@@ -58,6 +58,8 @@ public class BookingController {
 	@GetMapping("/bookings")
 	public ResponseEntity<List<BookingDto>> getAllBookings(){
 		
+		System.out.println("Injected::" +bookingService.getClass().getName());
+		
 		List<BookingDto> allBookings = bookingService.getAllBookings();
 		return new ResponseEntity<List<BookingDto>>(allBookings,HttpStatus.OK);
 	}

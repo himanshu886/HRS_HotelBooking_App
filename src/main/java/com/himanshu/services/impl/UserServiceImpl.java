@@ -66,33 +66,18 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void deleteUser(Integer userId) {
-		User user = this.userRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User", "Id",userId));
-		// TODO Auto-generated method stub
-		
+		User user = this.userRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User", "Id",userId));	
 		this.userRepo.delete(user);
 
 	}
 	
-	private User dtoToUser(UserDto userDto) {
-		
-//		User user = new User();
-		
+	private User dtoToUser(UserDto userDto) {		
 		User user = modelMapper.map(userDto,User.class);
-//		user.setId(userDto.getId());
-//		user.setName(userDto.getName());
-//		user.setEmail(userDto.getEmail());
-//		user.setAbout(userDto.getAbout());
-//		user.setPassword(userDto.getPassword());
-		
 		return user;
 	}
 	
-	public UserDto userToDto(User user) {
-		
+	public UserDto userToDto(User user) {	
 		UserDto userDto = modelMapper.map(user, UserDto.class);
-		
-//	 
-		
 		return userDto;
 	}
 

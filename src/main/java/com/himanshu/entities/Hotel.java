@@ -34,8 +34,6 @@ public class Hotel {
     @Column(length = 100)
     private String description;
     
-    private String imageName;
-    
    @OneToMany(mappedBy ="hotel", cascade = CascadeType.ALL, fetch = FetchType.LAZY )
     private List<Booking> booking= new ArrayList<>();
     

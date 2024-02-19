@@ -36,7 +36,6 @@ public class HotelServiceImpl implements HotelService {
 			hotel.setHotelName(hotelDto.getHotelName());
 			hotel.setLocation(hotelDto.getLocation());
 			hotel.setDescription(hotelDto.getDescription());
-			hotel.setImageName(hotelDto.getImageName());
 			
 			Hotel updatedHotel = hotelRepo.save(hotel);
 			HotelDto hotelToDto = hotelToDto(updatedHotel);
